@@ -1,0 +1,20 @@
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", sans-serif;
+}
+header {
+  background-color: #0066cc;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 3px solid #004c99;
+}
+a {
+  color: #004c99;
+}
+a:hover {
+  color: #003366;
+  text-decoration: underline;
+}

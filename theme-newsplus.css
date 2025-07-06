@@ -1,0 +1,20 @@
+
+body {
+  background-color: #f0f4f8;
+  color: #003366;
+  font-family: "游ゴシック体", YuGothic, sans-serif;
+}
+header {
+  background-color: #0055aa;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 3px solid #003366;
+}
+a {
+  color: #004488;
+}
+a:hover {
+  color: #002244;
+  text-decoration: underline;
+}

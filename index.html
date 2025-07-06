@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>わかくさ掲示板 - 板ごとテーマ切替デモ</title>
+<link id="theme-style" rel="stylesheet" href="style/theme-default.css" />
+<script src="supabase.js" defer></script>
+<script>
+  // 板slugの例（実際はURLパラメータやSupabaseから取得）
+  const urlParams = new URLSearchParams(window.location.search);
+  const boardSlug = urlParams.get('board') || 'default';
+
+  const themeMap = {
+    'news_plus': 'style/theme-newsplus.css',
+    'geispo_plus': 'style/theme-geispo.css',
+    '実況G': 'style/theme-jikkyou.css',
+    '実況J': 'style/theme-jikkyou.css',
+    'news_vip': 'style/theme-vip.css',
+    'news_kenmo': 'style/theme-kenmo.css',
+    'news': 'style/theme-news.css',
+    'default': 'style/theme-default.css'
+  };
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const themeStyle = document.getElementById('theme-style');
+    if (themeMap[boardSlug]) {
+      themeStyle.href = themeMap[boardSlug];
+    } else {
+      themeStyle.href = themeMap['default'];
+    }
+    // 板名を表示
+    const boardName = document.getElementById('board-name');
+    boardName.textContent = boardSlug;
+  });
+</script>
+</head>
+<body>
+<header><h1>わかくさ掲示板 - <span id="board-name"></span> 板</h1></header>
+<main>
+<p>これは板ごとにテーマが切り替わるサンプルページです。URLに ?board=板slug をつけてアクセスしてください。</p>
+<ul>
+  <li><a href="?board=news_plus">ニュース速報プラス</a></li>
+  <li><a href="?board=geispo_plus">芸スポ速報プラス</a></li>
+  <li><a href="?board=実況G">なんでも実況G</a></li>
+  <li><a href="?board=実況J">なんでも実況J</a></li>
+  <li><a href="?board=news_vip">ニュー速VIP</a></li>
+  <li><a href="?board=news_kenmo">ニュー速嫌儲</a></li>
+  <li><a href="?board=news">ニュース速報</a></li>
+  <li><a href="?board=default">デフォルトテーマ</a></li>
+</ul>
+</main>
+</body>
+</html>

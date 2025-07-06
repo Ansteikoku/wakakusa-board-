@@ -1,0 +1,20 @@
+
+body {
+  background-color: #eeeeee;
+  color: #222222;
+  font-family: "游明朝", "Yu Mincho", serif;
+}
+header {
+  background-color: #999999;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 3px solid #666666;
+}
+a {
+  color: #666666;
+}
+a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
